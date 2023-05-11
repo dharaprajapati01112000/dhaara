@@ -14,6 +14,9 @@ class TestServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        // register our controller
+    $this->app->make('First\Test\FirstController');
+    $this->loadViewsFrom(__DIR__.'/views', 'test');
     }
 
     /**
